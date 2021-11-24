@@ -16,5 +16,4 @@ export default props => (
         <Tab.Screen name="TelaB" component={TelaB} />
         <Tab.Screen name="TelaC" component={TelaC} />
     </Tab.Navigator>
-
 )
