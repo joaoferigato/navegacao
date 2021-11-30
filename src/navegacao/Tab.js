@@ -26,20 +26,21 @@ export default props => (
                             : 'ios-information-circle-outline'
                         break;
                     case 'TelaC':
-                        iconName = focused ? 'add-circle' : 'ios-list'
+                        iconName = focused ? 'ios-list' : 'ios-list-outline'
                         break;
                 }
                 return <Ionicons name={iconName} size={size} color={color} />
             },
+            tabBarActiveTintColor: 'red',
+            tabBarInactiveTintColor: "blue",
+            tabBarShowLabel: true,
         })}
-        tabBarOptions={{
-            activeTintColor: 'red',
-            inactiveTintColor: 'blue',
-            labelStyle: { fontSize: 30 }
-        }}
         initialRouteName="TelaB">
-        <Tab.Screen name="TelaA" component={TelaA} />
-        <Tab.Screen name="TelaB" component={TelaB} />
-        <Tab.Screen name="TelaC" component={TelaC} />
+        <Tab.Screen name="TelaA" component={TelaA}
+            options={{ title: 'Inicial' }} />
+        <Tab.Screen name="TelaB" component={TelaB}
+            options={{ title: 'Meio' }} />
+        <Tab.Screen name="TelaC" component={TelaC}
+            options={{ title: 'Final' }} />
     </Tab.Navigator>
 )
